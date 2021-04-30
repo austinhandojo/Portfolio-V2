@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap');
+/*******************WELCOME********************/
+body{
+    font-family: 'Josefin Slab', serif;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.mobilenav{
+  display: none;
+}
+.navlogo{
+    position: absolute;
+    width: 15%;
+    top: -2vh;
+    left: 2.3vw;
+}
+.container{
+    float: left;
+    width: 100vw;
+    height: 100vh;
+} 
+.menu{
+    width: 20%;
+    background-color: black;
+}
+.content{
+    width: 80%;
+    background: linear-gradient(214deg, #ffffff, #95c649, #304a82, #6e398f, #000000);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: bg_gradient 40s ease infinite;
+    animation: bg_gradient 40s ease infinite;
+}
+
+@-webkit-keyframes bg_gradient {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+@keyframes bg_gradient {
+    0%{background-position:0% 90%}
+    50%{background-position:100% 11%}
+    100%{background-position:0% 90%}
+}
+.nav {
+    position: relative;
+    margin: 0 15%;
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+.nav ul {
+    list-style: none;
+    font-family: 'Josefin Slab', serif;
+}
+.nav ul li {
+    position: relative;
+    margin: 3.2em 0;
+}
+.nav ul li a {
+    line-height: 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    color: rgba(255, 255, 255, 0.35);
+    display: block;
+    transition: all ease-out 300ms;
+}
+.nav ul li.active a {
+    color: white;
+}
+.nav ul li:not(.active)::after {
+    opacity: 0.2;
+}
+.nav ul li:not(.active):hover a {
+    color: rgba(255, 255, 255, 0.75);
+}
+.nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background: black;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, white, grey);
+}
+.hello{
+    position: absolute;
+    top: -0.5vw;
+    font-size: 25vw;
+    opacity: 30%;
+    color: gray;
+}
+.line-1{
+    position: absolute;
+    top: 54%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 25vw;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 5s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+.welcome{
+    width: 100%;
+    font-size: 5.0vw;
+    padding: 1em;
+    font-family: 'Josefin Slab', serif;
+    letter-spacing: 0.1em;
+    color: white;
+    z-index: 1;
+    
+}
+.appear{
+    animation: appear 1s;
+}
+.intro{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    animation-name: appear;
+}
+/*******************ABOUT********************/
+.about{
+    height: 100%;
+    display: inline-block;
+    color: white;
+}
+.title1{
+    font-size: 5vw;
+    padding-left: 1em;
+    padding-top: 14vw;
+    margin-bottom: 1rem;
+}
+.par1{
+    line-height: 1.1em;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: justify;
+    padding-left: 3em;
+    padding-right: 17em;
+}
+.pic_me{
+    position: absolute;
+    height: 70%;
+    right: 9vw;
+    top: 8vw;
+    z-index: 1;
+}
+.pic_me2{
+    position: absolute;
+    height: 70%;
+    right: 12vw;
+    top: 5vw;
+    filter: grayscale(70%);
+    opacity: 50%;
+}
+.pic_me3{
+    position: absolute;
+    height: 70%;
+    right: 7vw;
+    top: 11vw;
+    filter: grayscale(100%);
+    opacity: 15%;
+}
+/*******************Projects********************/
+.project-title{
+    padding-top: 5vh;
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.projectcards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 60%;
+}
+.card {
+    display: grid;
+    grid-template-rows: 13.125rem 13.125rem 5rem;
+    grid-template-areas:
+        "image"
+        "text"
+        "stats";
+    border-radius: 1.83vh;
+    background: white;
+    box-shadow: 0.313rem 0.313rem 0.938rem rgb(0 0 0 / 90%);
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    width: 18vw;
+    height: 47vh;
+    margin: 7vh;
+    transition: 0.5s ease;
+    margin:3.67vh;
+    cursor: pointer;
+
+  }
+  .card-image {
+    grid-area: image;
+  }
+  .card-text {
+    grid-area: text;
+  }
+  .card-image1 {
+    grid-area: image;
+    background: url("images/purdue.jpg");
+    border-top-left-radius: 1.83vh;
+    border-top-right-radius: 1.83vh;
+    background-size: cover;
+    width: 18vw;
+  }
+  .card-image2 {
+    grid-area: image;
+    background: url("images/honestmining.jpg");
+    border-top-left-radius: 1.83vh;
+    border-top-right-radius: 1.83vh;
+    background-size: cover;
+  }
+  .card-image3 {
+    grid-area: image;
+    background: url("images/web.jpg");
+    border-top-left-radius: 1.83vh;
+    border-top-right-radius: 1.83vh;
+    background-size: cover;
+  }
+  .card-text {
+    grid-area: text;
+    margin: 3.056vh;
+  }
+  .card-text .status {
+    color: green;
+    font-size:1.589vh;
+  }
+  .card-text p {
+    color: grey;
+    font-size: 1.5vh;
+    font-weight: 300;
+  }
+  .card-text h2 {
+    margin-top:0vh;
+    font-size:3.42vh;
+  }
+  .card:hover {
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  /*******************Contact********************/
+  .reach{
+    color: white;
+    font-size: 5vw;
+    width: 30%;
+    margin-left: 5vw;
+    margin-top: 30vh;
+  }
+  .emailbut{
+    font-size: 2vw;
+    font-family: 'Josefin Slab', serif;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:unset;
+    overflow: hidden;
+    font-weight: bold;
+    color: white;
+    margin-left: 5vw;
+  }
+  button .emaillink{ 
+    display: none; 
+  }
+  button:hover .email{ 
+    display: none;
+  }
+  button:hover .emaillink{
+    display: inline; 
+  }
+  .linkedbut{
+    display: block;
+    font-size: 2vw;
+    font-family: 'Josefin Slab', serif;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    font-weight: bold;
+    color: white;
+    margin-left: 5vw;
+    margin-top: 1vh;
+  }
+/*******************Animation********************/
+  .animate {
+    -webkit-animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+    -moz-animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+    animation: animate .6s cubic-bezier(0.2, 0.6, 0.2, 1);
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+}
+@-webkit-keyframes animate {
+	0% {opacity: 0;-webkit-transform: translateY(100%);}
+	100% {opacity: 1;-webkit-transform: translateY(0%);}	
+}
+
+@keyframes animate {
+	0% {opacity: 0;transform: translateY(30vh);}
+	100% {opacity: 1;transform: translateY(0%);}	
+}
+.delay02 { -webkit-animation-delay: .2s; animation-delay: .2s;}
+.delay04 { -webkit-animation-delay: .4s; animation-delay: .4s;}
+.delay06 { -webkit-animation-delay: .6s; animation-delay: .6s;}
+.delay08 { -webkit-animation-delay: .8s; animation-delay: .8s;}
+
+/*******************Mobile********************/
+@media screen and (max-width: 768px) {
+  /*******************WELCOME********************/
+  .menu{
+    display: none;
+  }
+  .container{
+    width: 100%;
+  }
+  .hello{
+    display: none;
+  }
+  .welcome{
+    text-align: center;
+  }
+  .mobilenav{
+    display: block;
+    height: 8vh;
+    background-color: black;
+  }
+  .navlogo{
+    display: none;
+  }
+  .mobilelogo{
+    width: 17%;
+    top: 0vh;
+  }
+  .navbut{
+    position: absolute;
+    right: 5vw;
+    top: 5vw;
+  }
+  .mobilemenu{
+    position: absolute;
+    background-color: white;
+    height: auto;
+    width: 100%;
+    top: 0px;
+  }
+}
